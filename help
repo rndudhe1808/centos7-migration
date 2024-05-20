@@ -1,0 +1,5 @@
+ping IP
+ssh-keygen -y
+ssh-copy-id  root@IP
+ansible all -i inventory -m ping 
+ansible-playbook -i inventory playbook.yaml
