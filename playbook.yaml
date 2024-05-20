@@ -1,0 +1,24 @@
+---
+- name: Transfer and run script on remote node
+  hosts: centos
+  tasks:
+    - name: Transfer script to remote node
+      copy:
+        src: /root/ansible/cent20/script.sh  # Path to your local script
+        dest: /tmp/script.sh          # Destination path on the remote node
+        mode: 0755                   # Set permissions to make the script executable
+
+    - name: Execute script on remote node
+      command: /tmp/script.sh        # Command to execute the script
+    - name: Reboot remote node
+      command: /sbin/reboot
+      async: 1
+      poll: 0
+      ignore_errors: true
+
+    - name: Wait for the node to reboot
+      wait_for_connection:
+        timeout: 300
+
+    - name: Display contents of os-release file
+      command: cat /etc/os-release
