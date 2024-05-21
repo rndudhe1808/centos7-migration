@@ -1,6 +1,6 @@
 dnf update —allowerasing
-sudo dnf update
-sudo dnf install centos-release-stream -y
-sudo dnf swap centos-linux-repos centos-stream-repos -y 
-sudo dnf distro-sync 
-sudo systemctl reboot
+dnf update
+dnf install centos-release-stream -y
+dnf swap centos-linux-repos centos-stream-repos -y 
+dnf distro-sync 
+systemctl reboot
