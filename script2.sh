@@ -1,8 +1,8 @@
 dnf clean all -y
-wget -y http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/Packages/linux-firmware-20210702-103.gitd79c2677.el8.noarch.rpm
-wget -y https://vault.centos.org/centos/8/BaseOS/x86_64/os/Packages/kernel-4.18.0-348.el8.x86_64.rpm
-wget -y https://vault.centos.org/centos/8/BaseOS/x86_64/os/Packages/kernel-modules-4.18.0-348.el8.x86_64.rpm
-wget -y https://vault.centos.org/centos/8/BaseOS/x86_64/os/Packages/kernel-core-4.18.0-348.el8.x86_64.rpm
+wget  http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/Packages/linux-firmware-20210702-103.gitd79c2677.el8.noarch.rpm
+wget https://vault.centos.org/centos/8/BaseOS/x86_64/os/Packages/kernel-4.18.0-348.el8.x86_64.rpm
+wget  https://vault.centos.org/centos/8/BaseOS/x86_64/os/Packages/kernel-modules-4.18.0-348.el8.x86_64.rpm
+wget  https://vault.centos.org/centos/8/BaseOS/x86_64/os/Packages/kernel-core-4.18.0-348.el8.x86_64.rpm
 dnf remove -y kexec-tools
 dnf remove -y ivtv-firmware
 dnf remove -y linux-firmware
