@@ -18,3 +18,4 @@ dnf update -y
 dnf install centos-release-stream -y
 dnf swap centos-{linux,stream}-repos -y
 dnf -y update
+sudo dnf distro-sync
