@@ -17,4 +17,3 @@ dnf install grub2 -y
 dnf update -y
 dnf install centos-release-stream -y
 dnf swap centos-{linux,stream}-repos -y
-reboot
