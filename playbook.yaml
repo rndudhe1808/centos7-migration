@@ -9,7 +9,7 @@
         mode: 0755                 
 
     - name: Execute script on remote node
-      command: /tmp/script.sh        
+      command: sh /tmp/script.sh        
     - name: Reboot remote node
       command: /sbin/reboot
       async: 1
