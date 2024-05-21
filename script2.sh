@@ -1,5 +1,5 @@
 dnf clean all -y
-
+dnf -y install kernel-core
 wget http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/Packages/linux-firmware-20230824-118.git0e048b06.el8.noarch.rpm
 
 wget http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/Packages/kernel-4.18.0-552.el8.x86_64.rpm
