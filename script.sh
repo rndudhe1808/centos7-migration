@@ -3,7 +3,7 @@ package-cleanup --orphans
 package-cleanup --leaves
 yum autoremove -y
 yum install dnf -y
-dnf remove yum yum-metadata-parser -y
+dnf remove yum yum-metadata-parser -y #if condition if yum not there skip actions
 rm -Rf /etc/yum
 dnf upgrade -y
 dnf clean all -y
