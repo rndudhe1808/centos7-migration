@@ -14,7 +14,6 @@ sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /
 dnf clean all -y
 rpm -e `rpm -q kernel`
 rpm -e --nodeps kmod-kvdo
-rpm -e vdo
 wget -y http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/Packages/linux-firmware-20210702-103.gitd79c2677.el8.noarch.rpm
 wget -y https://vault.centos.org/centos/8/BaseOS/x86_64/os/Packages/kernel-4.18.0-348.el8.x86_64.rpm
 wget -y https://vault.centos.org/centos/8/BaseOS/x86_64/os/Packages/kernel-modules-4.18.0-348.el8.x86_64.rpm
@@ -49,6 +48,6 @@ systemctl enable sshd
 systemctl start sshd
 dnf update -y —allowerasing
 sudo dnf -y update
-sudo dnf in centos-release-stream -y
+sudo dnf install centos-release-stream -y
 sudo dnf swap centos-linux-repos centos-stream-repos -y
 sudo dnf distro-sync -y
