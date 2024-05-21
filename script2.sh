@@ -1,14 +1,18 @@
 dnf clean all -y
-wget  http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/Packages/linux-firmware-20210702-103.gitd79c2677.el8.noarch.rpm
-wget https://vault.centos.org/centos/8/BaseOS/x86_64/os/Packages/kernel-4.18.0-348.el8.x86_64.rpm
-wget  https://vault.centos.org/centos/8/BaseOS/x86_64/os/Packages/kernel-modules-4.18.0-348.el8.x86_64.rpm
-wget  https://vault.centos.org/centos/8/BaseOS/x86_64/os/Packages/kernel-core-4.18.0-348.el8.x86_64.rpm
+
+wget http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/Packages/linux-firmware-20230824-118.git0e048b06.el8.noarch.rpm
+
+wget http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/Packages/kernel-4.18.0-552.el8.x86_64.rpm
+
+wget http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/Packages/kernel-modules-4.18.0-552.el8.x86_64.rpm
+
+wget http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/Packages/kernel-core-4.18.0-552.el8.x86_64.rpm
 dnf remove -y kexec-tools
 dnf remove -y ivtv-firmware
 dnf remove -y linux-firmware
-rpm -iv linux-firmware-20210702-103.gitd79c2677.el8.noarch.rpm
-rpm -iv kernel-modules-4.18.0-348.el8.x86_64.rpm
-rpm -iv --replacepkgs kernel-core-4.18.0-348.el8.x86_64.rpm
+rpm -iv linux-firmware-20230824-118.git0e048b06.el8.noarch.rpm
+rpm -iv kernel-modules-4.18.0-552.el8.x86_64.rpm
+rpm -iv --replacepkgs kernel-core-4.18.0-552.el8.x86_64.rpm
 rpm -e --nodeps sysvinit-tools
 rpm -q kernel-3.10.. and soft that depends on it
 dnf -y --releasever=8 --allowerasing --setopt=deltarpm=false distro-sync
